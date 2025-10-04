@@ -100,6 +100,55 @@ Local	.git/config	Only the current repo
 
 You can even open .gitconfig in Notepad to view or edit it manually.
 
+# Git File Tracking Status Lifecycle
+
+Every file in a Git repo can be in one of these 4 states:
+
+State       	    Meaning	                                        Typical Git Symbol
+-----------------------------------------------------------------------------------------------------------
+Untracked (U)	    New file, not yet added to Git	                ?? or A (after adding)
+Modified (M)	    File changed after last commit	                M
+Staged (A / M)	    File added to staging area (ready to commit)	A (Added) or M (Modified and staged)
+Unmodified	        No changes since last commit	                — (nothing shown)
+-----------------------------------------------------------------------------------------------------------
+
+
+Symbol	                            Meaning	                        Example Output	                     Description
+----------------------------------------------------------------------------------------------------------------------------------------------------
+??	                                Untracked	                    ?? newfile.txt	                    File not added to Git yet
+A	                                Added (staged new file)	        A newfile.txt	                    New file added to staging area
+M	                                Modified	                    M script.py	                        File changed since last commit
+M (in first column)	                Staged modification           	M script.py	                        File changes staged and ready to commit
+M (in second column)	            Unstaged modification	        M script.py	                        File changed but not staged yet
+D	                                Deleted	                        D oldfile.txt	                    File deleted from working directory
+R	                                Renamed	                        R100 oldname → newname	            File renamed
+C	                                Copied                          C100 fileA → fileB	                File copied
+U	                                Unmerged / conflict	            U file.txt	                        Merge conflict during merge/pull
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Cheat Sheet
+
+Symbol	        Meaning	        Staging?	         Description
+------------------------------------------------------------------------------------
+??	            Untracked	    ❌	                New file not tracked yet
+A	            Added	        ✅	               File added to Git
+M	            Modified	    ⚠️ / ✅	          File content changed
+D	            Deleted	        ✅	               File removed
+R	            Renamed	        ✅	               File renamed
+C	            Copied	        ✅                  File copied
+U	            Unmerged	    ❌	               Merge conflict
+------------------------------------------------------------------------------------
+
+# Quickly check the file statuses
+git status -s
+
+# Example
+
+M  index.html      # modified & staged
+ M style.css       # modified but not staged
+?? new.txt         # untracked
+
+
 # Other Useful Global Settings
 
 # Set your default branch name to main (demonstrated below also)
