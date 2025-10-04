@@ -27,18 +27,18 @@ changes 2 step process
 
 # Commit Process
 changes -> snapshot -> saved the history
------------------------------------------
+
 
 # The Three Areas in Git
 
 Every file in Git goes through three stages:
 
 Stage		    	Description								                            	Command
---------------------------------------------------------------------------------------------------------------------------
+
 Working Directory	Your local folder where you edit files	git status shows		    	what’s changed
 Staging Area		Where you prepare (select) files to include in your next snapshot	    git add file.txt
 Repository (Local)	Where Git permanently saves your snapshot (commit)			        	git commit -m "message"
---------------------------------------------------------------------------------------------------------------------------
+
 
 # Git User Naming + Emails (Account in action)
 
@@ -105,16 +105,16 @@ You can even open .gitconfig in Notepad to view or edit it manually.
 Every file in a Git repo can be in one of these 4 states:
 
 State       	    Meaning	                                        Typical Git Symbol
------------------------------------------------------------------------------------------------------------
+
 Untracked (U)	    New file, not yet added to Git	                ?? or A (after adding)
 Modified (M)	    File changed after last commit	                M
 Staged (A / M)	    File added to staging area (ready to commit)	A (Added) or M (Modified and staged)
 Unmodified	        No changes since last commit	                — (nothing shown)
------------------------------------------------------------------------------------------------------------
+
 
 
 Symbol	                            Meaning	                        Example Output	                     Description
-----------------------------------------------------------------------------------------------------------------------------------------------------
+
 ??	                                Untracked	                    ?? newfile.txt	                    File not added to Git yet
 A	                                Added (staged new file)	        A newfile.txt	                    New file added to staging area
 M	                                Modified	                    M script.py	                        File changed since last commit
@@ -124,12 +124,12 @@ D	                                Deleted	                        D oldfile.txt	
 R	                                Renamed	                        R100 oldname → newname	            File renamed
 C	                                Copied                          C100 fileA → fileB	                File copied
 U	                                Unmerged / conflict	            U file.txt	                        Merge conflict during merge/pull
-----------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Cheat Sheet
 
 Symbol	        Meaning	        Staging?	         Description
-------------------------------------------------------------------------------------
+
 ??	            Untracked	    ❌	                New file not tracked yet
 A	            Added	        ✅	               File added to Git
 M	            Modified	    ⚠️ / ✅	          File content changed
@@ -137,7 +137,7 @@ D	            Deleted	        ✅	               File removed
 R	            Renamed	        ✅	               File renamed
 C	            Copied	        ✅                  File copied
 U	            Unmerged	    ❌	               Merge conflict
-------------------------------------------------------------------------------------
+
 
 # Quickly check the file statuses
 git status -s
@@ -218,23 +218,23 @@ origin  https://github.com/noumanic/MyRepo.git (push)
 
 # What the output means?
 Part	Meaning
---------------------------------------------------------------------------------------
+
 origin	This is the name (alias) of your remote repo. Default name is always origin.
 fetch	The URL used when you download (pull) changes from GitHub.
 push	The URL used when you upload (push) changes to GitHub.
 URL	    The actual web address of your GitHub repo.
---------------------------------------------------------------------------------------
+
 
 
 # Why & When to Use It?
 
 Situation		        	    	Why use it
----------------------------------------------------------------------------------------
+
 After cloning a repo		    	To check which remote repo it’s linked to.
 After adding a remote		    	To confirm you added the correct GitHub link.
 If your push/pull isn’t working		To debug and ensure your remote URL is correct.
 When working with multiple remotes	To see all remotes (e.g. origin, upstream).
----------------------------------------------------------------------------------------
+
 
 # Disconnect a remote
 
@@ -256,9 +256,9 @@ Shortcut for 2 commands:
 
 
 So,
------------------------------------
+
 git pull = git fetch + git merge
------------------------------------
+
 
 # When You Use git pull?
 1. Already have a local copy of a repo.
