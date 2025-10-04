@@ -296,13 +296,7 @@ git pull upstream main
 
 # git pull Visual Flow
 
-GitHub (remote repo)
-     ↓
- git fetch (downloads new commits)
-     ↓
- git merge (combines with your local branch)
-     ↓
- Your local folder updated
+GitHub (remote repo) → git fetch (downloads new commits) → git merge (combines with your local branch) → Your local folder updated
 
 
 # In Short:
